@@ -1,10 +1,10 @@
-ticket = 7.45
+ticket = 1
 
-vip_minuten = 45
+vip_minuten = 5
 
 vip_kost_per_5_minuten = 0.37
 
-aantal_personen = 4
+aantal_personen = 1
 
 totaal_ticket_kosten = ticket * aantal_personen
 
