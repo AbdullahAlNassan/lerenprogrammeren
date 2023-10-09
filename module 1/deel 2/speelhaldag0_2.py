@@ -1,7 +1,7 @@
 aantal_mensen = int(input("hoeveel mensen gaan mee?"))
 
 TOEGANG_TICKET_PRIJS = 7.45
-gameseat_per_5_minuut = float(input("Hoeveel kost per 5 minuut?"))
+gameseat_per_5_minuut = float(input("Hoeveel kost per 5 minuut?")) 
 tijd_gameseat_minuut = int(input("Hoeveel minuten willen jullie spelen?"))
 PERIODE = 5
 
