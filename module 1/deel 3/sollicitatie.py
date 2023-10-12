@@ -1,15 +1,42 @@
-MAX_GEWICHT = 120
-MIN_GEWICHT = 90
 
-#sollicitati vragen
+MIN_GEWICHT = 90  
+MAX_GEWICHT = 120 
+MIN_LENGTE = 150 
+MAX_LENGTE = 220 
+MIN_DIEREN_ERVARING = 4  
+MIN_JONGLEREN_ERVARING = 5  
+MIN_ACROBATIEK_ERVARING = 3  
 
-print('Je kunt de vragen beantwoorden met ja / nee')
 
-vrachtwagen_rijbewijs = input('Ben je in bezit van een geldige vrachtwagen rijbewijs')
-hoed = input('Ben je in bezit van een hoge hoed?')
-gewicht = float(input('Wat is jou gewicht?'))
-lengte = int(input('Hoe lang ben je?'))
-certificaat = input('Heeft Certificaat Overleven met gevaarlijk personeel')
-praktijkervaring_met_dieren_dressuur = int(input('hoe veel jaar/jaren heb je ervaring met praktijkervaring met dieren-dressuur'))
-jongleren = int(input('hoe veel jaar ervaring heb je met jongleren'))
-acrobatiek = int(input('hoe veel jaar ervaring heb je met acrobatiek'))
+
+vrachtwagen_rijbewijs = input('Heeft u een geldig Vrachtwagen rijbewijs? (J/N): ')
+
+hoge_hoed = input('Heeft u een hoge hoed? (J/N): ')
+
+gewicht = int(input('Wat is uw lichaamsgewicht in kg?: '))
+
+lengte = int(input('Wat is uw lengte in cm?: '))
+
+overleven_certificaat = input('Heeft u het Certificaat “Overleven met gevaarlijk personeel”? (J/N): ')
+
+dieren_ervaring = int(input('Hoeveel jaar praktijkervaring heeft u met dieren-dressuur?: '))
+
+jongleren_ervaring = int(input('Hoeveel jaar ervaring heeft u met jongleren?: '))
+
+acrobatiek_ervaring = int(input('Hoeveel jaar praktijkervaring heeft u met acrobatiek?: '))
+
+
+if (
+    vrachtwagen_rijbewijs == 'J' and
+    hoge_hoed == 'J' and
+    MIN_GEWICHT <= gewicht <= MAX_GEWICHT and
+    MIN_LENGTE <= lengte <= MAX_LENGTE and
+    overleven_certificaat == 'J' and
+    (dieren_ervaring >= MIN_DIEREN_ERVARING or jongleren_ervaring >= MIN_JONGLEREN_ERVARING or acrobatiek_ervaring >= MIN_ACROBATIEK_ERVARING)
+):
+
+    print('Gefeliciteerd! U mag solliciteren naar de functie van Circusdirecteur voor Circus HotelDeBotel.')
+
+
+else:
+    print('Helaas, u voldoet niet aan alle criteria en komt niet in aanmerking voor de functie.')

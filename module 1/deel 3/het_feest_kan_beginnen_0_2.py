@@ -1,28 +1,17 @@
-#namen
-mijn_naam = 'Abdullah'
-slb_naam = "Jauke"
+MIJN_NAAM = 'Abdullah'
+SLB_NAAM = "jouke"
 
-# eisen
-gastheer = input('Wie is het gaastheer? (niemand! laat het leeg )')
-gasten = int(input('hoe veel gasten zijn aanwezig?'))
-drank = True
-chips = False
+gastheer = input('Wie is de gastheer? ')
+gasten = int(input('Hoeveel gasten zijn er? '))
+drank = 1
+chips = 1
 
-#stellingen
-
-if gastheer.lower() == mijn_naam.lower():
-    gastheer = True
-    print('het feest kan beginnen')
-elif gastheer.lower() == slb_naam.lower():
-    gastheer = False
-    print('geen feest')
-elif gastheer and (chips or drank) and 4 <= gasten < 20:
-    print('het feest kan beginnen')
-#
-elif not gastheer:
-    print("geen feest")
-
+if gastheer == MIJN_NAAM or ((4 <= gasten <= 20 and chips and drank) or (gastheer and drank)) and gastheer != SLB_NAAM:
+    print('Start the Party')
 else:
-    print('geen feest')
+    print('No Party')
+
+
+
 
 
