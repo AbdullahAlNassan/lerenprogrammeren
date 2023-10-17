@@ -1,13 +1,12 @@
-MIJN_NAAM = 'Abdullah'
+MIJN_NAAM = 'osama'
 SLB_NAAM = "jouke"
 
 gastheer = input('wie is de gastheer')
-gasten = 1
-drank = 1
-chips = 1
+gasten = False
+drank = True
+chips = False
+# print((gasten and chips and drank) or (gastheer > "" and drank))
 if (gastheer == MIJN_NAAM) or ((gasten and chips and drank) or (gastheer and drank)) and gastheer != SLB_NAAM:
     print('Start the Party')
 else:
-    print('No Party')
-
-    
+    print('geen feest')
