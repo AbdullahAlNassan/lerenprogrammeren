@@ -8,10 +8,20 @@ def numbers(nr1: int, nr2: int) -> str:
     else:
         return 'Beide getallen zijn even groot'
 
-nr1 = int(input('Voer nr1 in: '))
-nr2 = int(input('Voer nr2 in: '))
-
+nr1 = 5
+nr2 = 10
 result = numbers(nr1, nr2)
-print(result)
+test("Test 1", "Maximum: 10 en minimum: 5", result)
+
+nr1 = 15
+nr2 = 8
+result = numbers(nr1, nr2)
+test("Test 2", "Maximum: 15 en minimum: 8", result)
+
+nr1 = 3
+nr2 = 3
+result = numbers(nr1, nr2)
+test("Test 3", "Beide getallen zijn even groot", result)
+
 
 report()

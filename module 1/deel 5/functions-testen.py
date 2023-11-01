@@ -1,5 +1,5 @@
-from test_li import test, report
-from math import floor, ceil, pow
+from test_lib import test, report
+from math import floor, ceil
 
 nr = 5.65499901
 expected = 5.65
@@ -8,37 +8,37 @@ test('example', expected, calculated)
 
 nr = 13
 expected = 13.0
-calculated = float(nr) # use one function to calculate expected number
+calculated = float(nr) 
 test('to-the-point',expected, calculated)
 
 nr = -45.372
 expected = 45.372
-calculated = abs(nr) # use one function to calculate expected number
+calculated = abs(nr)
 test('optimistic', expected, calculated)
 
 nr = -45.372
 expected = -45.4
-calculated = round(nr, 1) # use one function to calculate expected number
+calculated = round(nr, 1) 
 test('approximately', expected, calculated)
 
 nr = 45.372
 expected = -45.372
-calculated = -nr # use one function to calculate expected number
+calculated = -nr 
 test('pessimistic', expected, calculated)
 
 nr = -2.3
 expected = -3
-calculated = floor(nr) # use one function to calculate expected number
+calculated = floor(nr) 
 test('depressed', expected, calculated)
 
 nr = -7.25
 expected = -7
-calculated = int(nr) # use one function to calculate expected number
+calculated = int(nr) 
 test('pointless', expected, calculated)
 
 nr = 15.11
 expected = 16
-calculated = ceil(nr) # use one function to calculate expected number
+calculated = ceil(nr) 
 test('sky-is-the-limit', expected, calculated)
 
 report()

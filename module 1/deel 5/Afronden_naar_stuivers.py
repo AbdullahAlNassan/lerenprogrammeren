@@ -4,8 +4,8 @@ def afronden_naar_5_cent(getal):
     return round(getal * 20) / 20
 
 # testen
-original_getal = 2.24
-expected_getal = 2.25
+original_getal = 2.13
+expected_getal = 2.10
 rounded_getal = afronden_naar_5_cent(original_getal)
 test("test1", expected_getal, rounded_getal)
 
