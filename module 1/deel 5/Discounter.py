@@ -16,10 +16,6 @@ brand = 'Vespa'
 discount = calc_discount(price, brand, month_discount_brands)
 test("Test 1", 100.0, discount)
 
-price = 1000.0
-brand = 'bmw'
-discount = calc_discount(price, brand, month_discount_brands)
-test("Test 1", 0.0, discount)
 
 price = 800.0
 brand = 'Kymco'

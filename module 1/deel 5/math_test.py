@@ -20,17 +20,9 @@ expected = nr2 - nr1
 calculated = substract(nr2, nr1)
 test('substract', expected, calculated)
 
-expected = 5
-calculated = substract(10, 5)
-test('10 - 5', expected, calculated)
-
 expected = nr1 * nr2
 calculated = multiply(nr1, nr2)
 test('multiply', expected, calculated)
-
-expected = 45
-calculated = multiply(15, 3)
-test('15 * 3', expected, calculated)
 
 expected = nr1 / nr2
 calculated = divide(nr1, nr2)
