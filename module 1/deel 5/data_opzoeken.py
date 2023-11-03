@@ -1,6 +1,8 @@
 def get_value(data: str, separator: str, position: int) -> str:
     splitted_strings = data.split(separator)
-    if 0 <= position < len(splitted_strings):
+    print(splitted_strings)
+    # if 0 <= position < len(splitted_strings):
+    if position >= 0 and position < len(splitted_strings):
         value = splitted_strings[position]
     else:
         value = None
@@ -13,3 +15,6 @@ position = 4
 
 result = get_value(toets_data, separator, position)
 print(result)
+data = 'bmw/audi/ferari/tesla'
+result = get_value (data,'/', 2)
+print (result)
