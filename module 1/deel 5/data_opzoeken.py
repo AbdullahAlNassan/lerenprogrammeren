@@ -1,6 +1,5 @@
 def get_value(data: str, separator: str, position: int) -> str:
     splitted_strings = data.split(separator)
-    print(splitted_strings)
     # if 0 <= position < len(splitted_strings):
     if position >= 0 and position < len(splitted_strings):
         value = splitted_strings[position]
