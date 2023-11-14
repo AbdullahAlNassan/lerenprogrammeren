@@ -15,7 +15,7 @@ if antwoord_1 == 'ja':
         if steen == 'ja':
             print('parmingiano reggiano')
         elif steen == 'nee':
-            print('goudse kaas ')
+            print('goudse kaas')
 elif antwoord_1 == 'nee':
     schimmel = input('heeft de kaas blauwe schimmel?')
     if schimmel == "ja":
