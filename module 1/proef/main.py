@@ -3,17 +3,12 @@ from gevangenis_1 import intro, make_decision
 def main():
     intro()
 
-    actions = 0
-    win = False
+    game_result, success = make_decision()
 
-    while actions < 10 and not win:
-        decision, win = make_decision()
-        actions += 1
-
-    if win:
-        print("Gefeliciteerd, je hebt het spel gewonnen!")
+    if success:
+        print("Gefeliciteerd! Je bent succesvol ontsnapt!")
     else:
-        print("Bedankt voor het spelen!")
+        print(f"Jammer, je bent opgepakt. Je hebt het niet gehaald. Resultaat: {game_result}")
 
-if __name__ == "__main__":
-    main()
+
+main()
