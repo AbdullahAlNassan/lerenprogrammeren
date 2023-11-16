@@ -7,11 +7,8 @@ for _ in range(7):
     robotArm.moveRight()
 
 for _ in range(7):
-    robotArm.grab()
-    robotArm.moveRight()
-    robotArm.drop()
-    for _ in range(2):
-        robotArm.moveLeft()
+    for a in [robotArm.grab, robotArm.moveRight, robotArm.drop, robotArm.moveLeft, robotArm.moveLeft]:
+        a()
 
 robotArm.grab()
 robotArm.moveRight()
