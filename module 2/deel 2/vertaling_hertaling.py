@@ -3,6 +3,7 @@ def vertaal_tekst(tekst, woordenboek):
     vertaalde_tekst = []
 
     for woord in woorden:
+        print(woord)
         vertaal_woord = woordenboek.get(woord, woord)
         vertaalde_tekst.append(vertaal_woord)
 
