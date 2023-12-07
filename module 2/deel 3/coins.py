@@ -14,8 +14,7 @@ if wisselgeld > 0:
         aantal_munten = wisselgeld // munt_waarde
         if aantal_munten > 0:
             print(f'Geef maximaal {aantal_munten} munt(en) van {munt_waarde / 100} euro terug!')
-            aantal_teruggegeven_munten = int(
-                input(f'Hoeveel munten van {munt_waarde / 100} euro heb je teruggegeven? '))
+            aantal_teruggegeven_munten = int(input(f'Hoeveel munten van {munt_waarde / 100} euro heb je teruggegeven? '))
             wisselgeld -= aantal_teruggegeven_munten * munt_waarde
         if munt_waarde == 500:
             munt_waarde = 200
