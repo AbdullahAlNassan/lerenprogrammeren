@@ -1,5 +1,3 @@
-import random
-
 # Constantes
 PRIJS_COLA = 1.80
 PRIJS_BIER = 2.40
