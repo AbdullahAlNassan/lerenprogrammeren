@@ -7,7 +7,6 @@ DRANKJES = ('cola', 'bier', 'champagne')
 VIP_LIST = ('jeroen', 'jouke', 'rudi')
 
 KLEUR_BANDJE = 'Je krijgt van mij een {kleur} bandje'
-STEMPEL = 'Je krijgt van mij een stempel'
 COMPLIMENTEN = 'Alsjeblieft complimenten van het huis'
 DRANKJE_PRIJS = 'Alsjeblieft, je {drankje}, dat is dan €{prijs}'
 LATER_PROBEREN = 'Probeer het over {0} jaar nog eens'
@@ -32,12 +31,16 @@ naam = input('Wat is je naam? ')
 if naam in VIP_LIST and leeftijd >= 21:
     kleur = 'blauw'
     print(KLEUR_BANDJE.format(kleur=kleur))
-else:
+elif naam in VIP_LIST and leeftijd < 21:
     kleur = 'rood'
     print(KLEUR_BANDJE.format(kleur=kleur))
+elif naam not in VIP_LIST and leeftijd >= 21:
+    print('Je krijgt van mij een stempel')
 
-# Vraag naar drankje
+
+
 drankje = input('Wat wil je drinken? ')
+    
 
 # Controleer drankje
 if drankje not in DRANKJES:
@@ -47,7 +50,7 @@ else:
     if drankje == 'bier' and leeftijd < 21:
         print(GEEN_ALCOHOL.format(21 - leeftijd))
         print(LATER_PROBEREN.format(21 - leeftijd))
-    elif drankje == 'bier' and leeftijd < 21 and naam not in VIP_LIST:
+    elif drankje == 'bier' and leeftijd >= 21 and naam not in VIP_LIST:
         print(DRANKJE_PRIJS.format(drankje=drankje, prijs=PRIJS_BIER))
     elif drankje == 'bier' and naam in VIP_LIST and kleur == 'blauw':
         print(COMPLIMENTEN)
@@ -58,12 +61,10 @@ else:
         print(LATER_PROBEREN.format(21 - leeftijd))
     elif drankje == 'champagne' and naam in VIP_LIST and kleur == 'blauw':
         print(DRANKJE_PRIJS.format(drankje=drankje, prijs=PRIJS_CHAMPAGNE))
+    elif drankje == 'cola' and naam in VIP_LIST:
+        print(COMPLIMENTEN)
     else:
-        # Bereken prijs
-        prijs = PRIJS_COLA if drankje == 'cola' else PRIJS_BIER if drankje == 'bier' else PRIJS_CHAMPAGNE
-
-        # Print bevestiging
-        print(DRANKJE_PRIJS.format(drankje=drankje, prijs=prijs))
+        print(DRANKJE_PRIJS.format(drankje=drankje, prijs=PRIJS_COLA))
 
 # Einde programma
 print('Tot ziens!')
