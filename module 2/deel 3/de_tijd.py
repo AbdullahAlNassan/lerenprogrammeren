@@ -13,7 +13,17 @@ while uur < 24:
     else:
         geformateerd_uur = uur - 12
 
-    print(f"{geformateerd_uur}:00 {tijd}")
+    if uur >= 16 and uur <= 20:
+        dinner_time = "dinner time"
+    else:
+        dinner_time = ""
+        
+    
+ 
+
+
+
+    print(f"{geformateerd_uur}:00 {tijd} {dinner_time }")
     uur += 1
 
 
