@@ -30,7 +30,7 @@ if naam not in VIP_LIST and leeftijd >= 21:
 elif naam in VIP_LIST and leeftijd >= 21:
     kleur = 'blauw'
 elif naam in VIP_LIST and leeftijd < 21:
-    kleur = 'rood'
+    kleur = 'rood' 
 
 print(f'Je krijgt van mij een {kleur} bandje')
 
