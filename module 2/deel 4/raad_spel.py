@@ -9,23 +9,16 @@ while rounds < 20:
     secret_number = random.randint(1, 1000)
     guess_attempts = 0
 
-    while guess_attempts < 10:
+    for guess_attempts in range(10):
         guess = input('Raad een getal tussen 1 en 1000: ')
-        
-        try:
-            guess = int(guess)
-        except ValueError:
-            print('Ongeldige invoer. Voer een geldig getal in.')
-            continue
-
-        guess_attempts += 1
+        guess = int(guess)
 
         if guess == secret_number:
             print(f'Gefeliciteerd! Je hebt het geheime getal {secret_number} geraden.')
             score += 1
             break
         else:
-            difference = secret_number - guess
+            difference = abs (secret_number - guess)
             if difference < 20:
                 print('Je bent heel warm!')
             elif difference < 50:
@@ -40,7 +33,8 @@ while rounds < 20:
 
     if rounds < 20:
         play_again = input('Nog een getal raden? (ja/nee): ')
-        if play_again.lower() != 'ja':
+        if play_again != 'ja':
             break
 
 print(f'Eindscore: {score}/20')
+
