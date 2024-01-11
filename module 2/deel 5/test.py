@@ -1,10 +1,10 @@
 from fruitmand import fruitmand
 
-rounds = 0
+kleuren_vertaling = {
+    "red" : "rood",
+    "green" : "groen",
+    "orange" : "oranje"
+}
 
-for fruit in fruitmand:
-    gekozen_kleur = input(f"Choose a color for {fruit}: ")
-    if gekozen_kleur in fruit["color"]:
-        rounds += 1
+langste_naam_fruit = fruitmand[0]
 
-print(f"Total rounds with matching colors: {rounds}")
