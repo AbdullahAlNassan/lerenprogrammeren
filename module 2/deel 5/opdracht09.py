@@ -1,9 +1,35 @@
 from fruitmand import fruitmand
 
-fruitmand = [fruit for fruit in fruitmand
-             if fruit['name'] != 'druif']
+lijst = []
 
-uniek_kleur = set(fruit['color'] for fruit in fruitmand)
+for fruit in fruitmand:
+    if fruit["color"] not in lijst:
+        lijst.append(fruit["color"])
 
-for color in uniek_kleur:
-    print(color)
+print(lijst)
+
+for _ in range(2):
+    druif_index = None
+
+    for index in range(len(fruitmand)):
+        if fruitmand[index] ["name"] == "druif":
+            druif_index = index
+            
+    fruitmand.pop(druif_index)
+
+
+# index = 0
+
+# while index < len(fruitmand):
+#     if fruitmand[index]['name'] == 'druif':
+#         fruitmand.pop(index)
+#     else:
+#         index += 1
+
+for fruit in fruitmand:
+    print(fruit)
+
+
+
+
+
