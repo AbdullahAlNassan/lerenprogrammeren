@@ -18,8 +18,24 @@ while True:
 
         if meer_namen == 'nee':
             break
+# deelnemers = ['Jan','Abdullah','Mutjaba','Rudi','Jeroen','Abigail']
 
-lootjes = deelnemers[1:] + deelnemers[:1]
+# nogos = [['Jan','Abdullah'],['Rudi','Jeroen'],['Rudi','Jan']]
+
+while True:
+    lootjes = list(deelnemers)
+    random.shuffle(lootjes)
+    eigen_lootje = True
+
+    for i in range(len(deelnemers)):
+        if deelnemers[i] == lootjes[i]:
+            eigen_lootje = False
+            break
+
+    
+    if eigen_lootje:
+        break
+    
 
 for i in range(len(deelnemers)):
     print(f"{deelnemers[i]} koopt voor: {lootjes[i]}")
