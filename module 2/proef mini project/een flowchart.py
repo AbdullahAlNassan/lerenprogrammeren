@@ -18,9 +18,8 @@ while True:
 
         if meer_namen == 'nee':
             break
-# deelnemers = ['Jan','Abdullah','Mutjaba','Rudi','Jeroen','Abigail']
 
-# nogos = [['Jan','Abdullah'],['Rudi','Jeroen'],['Rudi','Jan']]
+nogos = [['Jan','Abdullah'],['Rudi','Jeroen'],['Rudi','Jan']]
 
 while True:
     lootjes = list(deelnemers)
