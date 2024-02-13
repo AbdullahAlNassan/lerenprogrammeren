@@ -4,4 +4,4 @@ def vraag_gegevens():
     return name, age
 
 name, age = vraag_gegevens()
-print(f'{name} is {age} jaar oud!')
+print(f'{name} is {age} jaar')
