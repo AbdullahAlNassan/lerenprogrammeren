@@ -1,7 +1,15 @@
-def vraag_gegevens():
-    name = input('Wat is je naam? ')
-    age = input('Hoe oud ben je? ')
-    return name, age
+from naam_leeftijd import vraag_naam_leeftijd
+
+# def vraag_gegevens():
+#     gegevens = {}
+
+#     naam = input('Wat is je naam? ')
+#     leeftijd = input('Hoe oud ben je? ')
+
+#     gegevens["naam"] = naam
+#     gegevens['leeftijd'] = leeftijd
+    
+#     return gegevens
 
 def verzamel_gegevens():
     gegevens_list = []
@@ -9,10 +17,12 @@ def verzamel_gegevens():
         stoppen = input('klick enter om door te gaan of toets stop om te stoppen: ')
         if stoppen == 'stop':
             break
-        name, age = vraag_gegevens()
-        gegevens_list.append((name, age))
+        gegevens = vraag_naam_leeftijd()
+        gegevens_list.append((gegevens))
     return gegevens_list
 
 gegevens_list = verzamel_gegevens()
-for name, age in gegevens_list:
-    print(f'{name} is {age} jaar oud!')
+for gegevens in gegevens_list:
+    print(f'{gegevens["naam"]} is {gegevens["leeftijd"]} jaar')
+
+

@@ -1,10 +1,17 @@
 import random
 
 def vraag_gegevens():
-    name = input('Wat is je naam? ')
-    age = input('Hoe oud ben je? ')
-    woonplaats = input('waar woon je?')
-    return name, age, woonplaats
+    gegevens = {}
+
+    naam = input('Wat is je naam? ')
+    leeftijd = input('Hoe oud ben je? ')
+    haar_kleur = input('wat voor kleur haar heb je?')
+
+    gegevens["naam"] = naam
+    gegevens['leeftijd'] = leeftijd
+    gegevens['kleur'] = haar_kleur
+    
+    return gegevens
 
 def verzamel_gegevens():
     gegevens_list = []
@@ -12,6 +19,7 @@ def verzamel_gegevens():
         stoppen = input('klick enter om door te gaan of toets stop om te stoppen: ')
         if stoppen == 'stop':
             break
-        name, age, woonplaats = vraag_gegevens()
-        gegevens_list.append((name, age, woonplaats))
+        gegevens = vraag_gegevens()
+        gegevens_list.append((gegevens))
     return gegevens_list
+
