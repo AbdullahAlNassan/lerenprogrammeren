@@ -4,7 +4,7 @@ from data import *
 totalCost = 0
 chapterNr = 1
 
-print_title('A Treasure Hunt Adventure Story')
+print_title('Abdullah Story')
 print_chapter(chapterNr, 'THE FELLOWSHIP')
 
 cashInGold      = getPersonCashInGold(mainCharacter['cash'])
